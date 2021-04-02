@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>davidshen84@gmail.com</email>
+    <name>Xi Shen</name>
+  </maintainer>
+  <longdescription>
+    Gentoo ebuild for https://github.com/NVIDIA/libnvidia-container.
+  </longdescription>
+</pkgmetadata>
