@@ -1,0 +1,11 @@
+--- a/mk/common.mk
++++ b/mk/common.mk
+@@ -22,7 +22,7 @@ PATCH    ?= patch
+ UID      := $(shell id -u)
+ GID      := $(shell id -g)
+ DATE     := $(shell date -u --iso-8601=minutes)
+-REVISION := $(shell git rev-parse HEAD)
++REVISION := bd9fc3f2b642345301cb2e23de07ec5386232317
+ COMPILER := $(realpath $(shell which $(CC)))
+ PLATFORM ?= $(shell uname -m)
+ 
