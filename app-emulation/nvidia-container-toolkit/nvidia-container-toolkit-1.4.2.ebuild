@@ -52,7 +52,7 @@ src_compile() {
 
 src_install() {
 	dobin ${PN}
-	dosym ${PN} usr/bin/oci-nvidia-hook
+	dosym ${PN} usr/bin/nvidia-container-runtime-hook
 	mkdir -p etc/nvidia-container-runtime
 	insinto etc/nvidia-container-runtime
 	newins config/config.toml.ubuntu nvidia-container-runtime
