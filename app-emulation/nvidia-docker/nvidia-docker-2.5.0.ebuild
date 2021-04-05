@@ -11,7 +11,8 @@ KEYWORDS="~amd64"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-RDEPEND="app-emulation/nvidia-container-runtime"
+RDEPEND=">=x11-drivers/nvidia-drivers-460.39[driver(+)]
+app-emulation/nvidia-container-runtime"
 
 src_compile() {
 	:
@@ -19,5 +20,6 @@ src_compile() {
 
 src_install() {
 	dobin nvidia-docker
-	dodoc daemon.json
+	insinto etc/docker
+	doins daemon.json
 }
