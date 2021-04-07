@@ -42,7 +42,7 @@ src_compile() {
 	mkdir -p "${WORKDIR}/${P}/deps/src"
 	ln -s "${WORKDIR}/libtirpc-1.1.4" "${TIRPC_SRC_DIR}"
 	ln -s "${WORKDIR}/nvidia-modprobe-450.57" "${MOD_SRC_DIR}"
-	emake WITH_LIBELF="yes" WITH_TIRPC="yes" WITH_SECCOMP="${WITH_SECCOMP}" CURL="echo" TAR="echo" CC="gcc" shared static tools
+	emake WITH_LIBELF="yes" WITH_TIRPC="yes" WITH_SECCOMP="${WITH_SECCOMP}" CURL="echo" TAR="echo" shared static tools
 }
 
 src_install() {
