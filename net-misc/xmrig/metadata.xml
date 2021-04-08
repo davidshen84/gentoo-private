@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>davidshen84@gmail.com</email>
+    <name>Xi Shen</name>
+  </maintainer>
+  <longdescription>
+    XMRig is a high performance, open source, cross platform RandomX, KawPow, CryptoNight and AstroBWT unified CPU/GPU miner and RandomX benchmark. Official binaries are available for Windows, Linux, macOS and FreeBSD. (This package only supports CPU mining.)
+  </longdescription>
+  <use>
+    <flag name="tls">Enable TLS (OpenSSL) support.</flag>
+    <flag name="hwloc">Use hwloc to get hardward topology.</flag>
+    <flag name="msr">Enable MSR mod and 1st-gen Ryzen fix</flag>
+    <flag name="http">
+      Enable HTTP protocol support (client/server)
+    </flag>
+    <flag name="cryptonight">
+      Enable CryptoNight-Lite, CryptoNight-Heavy and CryptoNight-Pico
+      algorithm families
+    </flag>
+    <flag name="randomx">Enable RandomX algorithms family</flag>
+    <flag name="argon2">Enable Argon2 algorithms family</flag>
+    <flag name="astrobwt">Enable AstroBWT algorithms family</flag>
+    <flag name="kawpow">Enable KawPow algorithms family</flag>
+    <flag name="securejit">Enable secure access to JIT memory</flag>
+  </use>
+</pkgmetadata>
