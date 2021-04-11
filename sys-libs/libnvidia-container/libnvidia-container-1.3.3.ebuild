@@ -7,7 +7,6 @@ EAPI=7
 
 DESCRIPTION="Automatically configure containers with NVIDIA hardware."
 HOMEPAGE="https://github.com/NVIDIA/libnvidia-container"
-#EGIT_REPO_URI="file:///home/xi/github/libnvidia-container/"
 SRC_URI="https://github.com/NVIDIA/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${PN}-${PV}.tar.gz
 https://downloads.sourceforge.net/project/libtirpc/libtirpc/1.1.4/libtirpc-1.1.4.tar.bz2 -> libtirpc.tar.bz2
 https://github.com/NVIDIA/nvidia-modprobe/archive/450.57.tar.gz -> nvidia-modprobe-450.57.tar.gz
