@@ -9,7 +9,6 @@ HOMEPAGE="https://github.com/NVIDIA/nvidia-container-runtime"
 LICENSE="Apache-2.0"
 KEYWORDS="~amd64"
 SLOT="0"
-IUSE=""
 
 RDEPEND=">=dev-lang/go-1.4
 >=app-emulation/nvidia-container-toolkit-1.4.2"
