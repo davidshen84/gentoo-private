@@ -1,0 +1,24 @@
+--- a/deps/src/libtirpc-1.1.4/src/rpc_com.h
++++ b/deps/src/libtirpc-1.1.4/src/rpc_com.h
+@@ -61,8 +61,7 @@ void __xprt_unregister_unlocked(SVCXPRT *);
+ void __xprt_set_raddr(SVCXPRT *, const struct sockaddr_storage *);
+ 
+ 
+-SVCXPRT **__svc_xports;
+-int __svc_maxrec;
++extern int __svc_maxrec;
+ 
+ #ifdef __cplusplus
+ }
+--- a/deps/src/libtirpc-1.1.4/src/svc.c
++++ b/deps/src/libtirpc-1.1.4/src/svc.c
+@@ -57,6 +57,9 @@
+ 
+ #define max(a, b) (a > b ? a : b)
+ 
++static SVCXPRT **__svc_xports;
++int __svc_maxrec;
++
+ /*
+  * The services list
+  * Each entry represents a set of procedures (an rpc program).

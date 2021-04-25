@@ -3,8 +3,6 @@
 
 EAPI=7
 
-#inherit git-r3
-
 DESCRIPTION="Automatically configure containers with NVIDIA hardware."
 HOMEPAGE="https://github.com/NVIDIA/libnvidia-container"
 SRC_URI="https://github.com/NVIDIA/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${PN}-${PV}.tar.gz
@@ -24,24 +22,26 @@ seccomp? ( >=sys-libs/libseccomp-2.4.4 )"
 PATCHES=(
 	"${FILESDIR}/revision.patch"
 	"${FILESDIR}/Makefile.patch"
+	"${FILESDIR}/libtirpc-1.4.4-gcc10.patch"
 )
 
 QA_PRESTRIPPED="/usr/bin/nvidia-container-cli
 /usr/lib64/libnvidia-container.so.*"
 
-src_compile() {
-	if use seccomp ; then
-	   WITH_SECCOMP=yes
-	fi
-
+src_prepare() {
 	DEPS_DIR=${WORKDIR}/${P}/deps
 	TIRPC_SRC_DIR=${DEPS_DIR}/src/libtirpc-1.1.4
 	MOD_SRC_DIR=${DEPS_DIR}/src/nvidia-modprobe-450.57
 
-	mkdir -p "${WORKDIR}/${P}/deps/src"
-	ln -s "${WORKDIR}/libtirpc-1.1.4" "${TIRPC_SRC_DIR}"
-	ln -s "${WORKDIR}/nvidia-modprobe-450.57" "${MOD_SRC_DIR}"
-	emake WITH_LIBELF="yes" WITH_TIRPC="yes" WITH_SECCOMP="${WITH_SECCOMP}" CURL="echo" TAR="echo" shared static tools
+	mkdir -p "${DEPS_DIR}/src"
+	mv "${WORKDIR}/libtirpc-1.1.4" "${TIRPC_SRC_DIR}"
+	mv "${WORKDIR}/nvidia-modprobe-450.57" "${MOD_SRC_DIR}"
+
+	default_src_prepare
+}
+
+src_compile() {
+	emake WITH_LIBELF="yes" WITH_TIRPC="yes" WITH_SECCOMP="$(usex seccomp)" CURL="echo" TAR="echo" shared static tools
 }
 
 src_install() {
