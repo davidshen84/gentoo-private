@@ -7,11 +7,11 @@ DESCRIPTION="A modified version of runc adding a custom pre-start hook to all co
 HOMEPAGE="https://github.com/NVIDIA/nvidia-container-runtime"
 
 LICENSE="Apache-2.0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 SLOT="0"
 
 RDEPEND=">=dev-lang/go-1.4
->=app-emulation/nvidia-container-toolkit-1.4.2"
+>=app-emulation/nvidia-container-toolkit-1.5.0"
 
 SRC_URI="https://www.github.com/NVIDIA/${PN}/archive/v${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 
