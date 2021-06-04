@@ -11,7 +11,7 @@ https://github.com/NVIDIA/nvidia-modprobe/archive/450.57.tar.gz -> nvidia-modpro
 "
 
 IUSE="+seccomp"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 LICENSE="Apache-2.0"
 SLOT="0"
 
