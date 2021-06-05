@@ -15,11 +15,12 @@ RDEPEND=">=dev-lang/go-1.4
 
 SRC_URI="https://www.github.com/NVIDIA/${PN}/archive/v${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 
+QA_PRESTRIPPED="/usr/bin/nvidia-container-runtime"
+
 src_compile() {
-	cd src
 	emake build
 }
 
 src_install() {
-	dobin src/nvidia-container-runtime
+	dobin nvidia-container-runtime
 }
