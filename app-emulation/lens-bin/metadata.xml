@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>davidshen84@gmail.com</email>
+    <name>Xi Shen</name>
+  </maintainer>
+  <longdescription>
+    Lens is the only IDE you’ll ever need to take control of your
+    Kubernetes clusters. It's built on open source and free. Download
+    it today!
+  </longdescription>
+</pkgmetadata>
