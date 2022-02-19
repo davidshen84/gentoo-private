@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -39,7 +39,7 @@ HOMEPAGE="https://github.com/NVIDIA/nvidia-container-toolkit"
 SRC_URI="https://github.com/NVIDIA/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	${EGO_SUM_SRC_URI}"
 
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 LICENSE="Apache-2.0"
 SLOT="0"
 

@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -22,7 +22,7 @@ seccomp? ( >=sys-libs/libseccomp-2.4.4 )"
 PATCHES=(
 	"${FILESDIR}/revision.patch"
 	"${FILESDIR}/Makefile.patch"
-	"${FILESDIR}/libtirpc-1.4.4-gcc10.patch"
+	"${FILESDIR}/libtirpc-1.1.4-gcc10.patch"
 )
 
 QA_PRESTRIPPED="/usr/bin/nvidia-container-cli
