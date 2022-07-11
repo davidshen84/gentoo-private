@@ -1,0 +1,10 @@
+--- a/mk/common.mk
++++ b/mk/common.mk
+@@ -27,7 +27,7 @@ ifdef SOURCE_DATE_EPOCH
+ else
+     DATE := $(shell date -u --iso-8601=minutes)
+ endif
+-REVISION ?= $(shell git rev-parse HEAD)
++REVISION ?= 395fd41701117121f1fd04ada01e1d7e006a37ae
+ COMPILER := $(realpath $(shell which $(CC)))
+ PLATFORM ?= $(shell uname -m)
