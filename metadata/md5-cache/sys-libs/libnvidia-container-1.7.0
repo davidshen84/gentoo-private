@@ -1,0 +1,12 @@
+BDEPEND=sys-devel/bmake >net-libs/rpcsvc-proto-1.4.0
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Automatically configure containers with NVIDIA hardware.
+EAPI=7
+HOMEPAGE=https://github.com/NVIDIA/libnvidia-container
+IUSE=+seccomp
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=>=virtual/libelf-3 seccomp? ( >=sys-libs/libseccomp-2.4.4 ) >=x11-drivers/nvidia-drivers-495[driver(+)]
+SLOT=0
+SRC_URI=https://github.com/NVIDIA/libnvidia-container/archive/refs/tags/v1.7.0.tar.gz -> libnvidia-container-1.7.0.tar.gz https://downloads.sourceforge.net/project/libtirpc/libtirpc/1.1.4/libtirpc-1.1.4.tar.bz2 -> libtirpc.tar.bz2 https://download.nvidia.com/XFree86/nvidia-modprobe/nvidia-modprobe-495.44.tar.bz2 -> nvidia-modprobe-495.44.tar.bz2
+_md5_=fd15c170e82688024962974c06f74b18

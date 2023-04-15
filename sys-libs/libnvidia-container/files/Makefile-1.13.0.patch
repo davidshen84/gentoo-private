@@ -1,0 +1,24 @@
+--- a/Makefile
++++ b/Makefile
+@@ -165,9 +165,9 @@ else
+ LIB_LDLIBS_STATIC  += -l:libelf.a
+ endif
+ ifeq ($(WITH_TIRPC), yes)
+-LIB_CPPFLAGS       += -isystem $(DEPS_DIR)$(includedir)/tirpc -DWITH_TIRPC
+-LIB_LDLIBS_STATIC  += -l:libtirpc.a
+-LIB_LDLIBS_SHARED  += -lpthread
++LIB_CPPFLAGS       += -isystem /usr/include/tirpc -DWITH_TIRPC
++# LIB_LDLIBS_STATIC  += -l:libtirpc.a
++LIB_LDLIBS_SHARED  += -lpthread -ltirpc
+ endif
+ ifeq ($(WITH_SECCOMP), yes)
+ LIB_CPPFLAGS       += -DWITH_SECCOMP $(shell pkg-config --cflags libseccomp)
+@@ -266,7 +266,7 @@ ifeq ($(WITH_LIBELF), no)
+ 	$(MAKE) -f $(MAKE_DIR)/elftoolchain.mk DESTDIR=$(DEPS_DIR) install
+ endif
+ ifeq ($(WITH_TIRPC), yes)
+-	$(MAKE) -f $(MAKE_DIR)/libtirpc.mk DESTDIR=$(DEPS_DIR) install
++	# $(MAKE) -f $(MAKE_DIR)/libtirpc.mk DESTDIR=$(DEPS_DIR) install
+ endif
+ 
+ install: all
