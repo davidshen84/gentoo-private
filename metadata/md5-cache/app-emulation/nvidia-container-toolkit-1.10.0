@@ -10,5 +10,5 @@ RDEPEND=dev-lang/go ~sys-libs/libnvidia-container-1.10.0
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/NVIDIA/nvidia-container-toolkit/archive/refs/tags/v1.10.0.tar.gz -> nvidia-container-toolkit-1.10.0.tar.gz
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22
 _md5_=ec941f837529783236a10d3ca9ad36a5
