@@ -5,6 +5,9 @@
     <email>davidshen84@gmail.com</email>
     <name>Xi Shen</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">NVIDIA/libnvidia-container</remote-id>
+  </upstream>
   <longdescription>
     Gentoo ebuild for https://github.com/NVIDIA/libnvidia-container.
   </longdescription>
