@@ -1,4 +1,4 @@
-# Copyright 2020-2023 Gentoo Authors
+# Copyright 2020-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -15,7 +15,7 @@ KEYWORDS="amd64"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-BDEPEND="sys-devel/bmake
+BDEPEND="dev-build/bmake
 >net-libs/rpcsvc-proto-1.4.0"
 
 RDEPEND=">=virtual/libelf-3
