@@ -31,7 +31,6 @@ src_install() {
 
 	mkdir -p etc/nvidia-container-runtime
 	insinto etc/nvidia-container-runtime
-	newins config/config.toml.ubuntu config.toml
 }
 
 pkg_postrm() {
